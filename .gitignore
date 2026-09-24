@@ -1,0 +1,19 @@
+# secrets and local data
+.env
+.env.*
+!.env.example
+backups/
+*.dump
+
+# build output
+/bin/
+/tmp/
+*.test
+*.out
+coverage.*
+
+# editors / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store

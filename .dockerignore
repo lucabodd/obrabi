@@ -1,0 +1,10 @@
+.git
+.env
+.env.*
+backups
+bin
+tmp
+docs
+*.md
+!README.md
+web/tests

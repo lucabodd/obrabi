@@ -1,0 +1,11 @@
+# Used by the optional "https" profile of docker-compose.yml.
+# Caddy obtains and renews the certificate for OBRABI_DOMAIN automatically;
+# ports 80 and 443 of this host must be reachable from the Internet.
+{$OBRABI_DOMAIN} {
+	encode zstd gzip
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		-Server
+	}
+	reverse_proxy gateway:8080
+}
